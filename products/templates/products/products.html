@@ -1,1 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-6 col-md-4">
+      <div>
+        <a href="#">
+          <div>
+            <img src="{{ product.product_image.url }}" alt="Image of shoe product" class="scale">
+          </div>
+          <div>
+            <h3 class="text-center">{{ product.name }}</h3>
+            <p class="text-center">Price: £{{ product.price }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

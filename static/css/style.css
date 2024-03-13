@@ -53,3 +53,8 @@ footer {
   font-size: 22px;
   align-items: center;
 }
+
+.scale {
+  width: 100%;
+  height: 100%;
+}
