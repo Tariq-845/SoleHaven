@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'about' as about_url %}
+{% url 'browse' as browse_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +35,7 @@
             <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Browse</a>
+            <a class="nav-link" href="{% url 'browse' %}">Browse</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Register</a>
