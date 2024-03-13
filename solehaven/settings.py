@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'products',
     'about',
 ]
@@ -94,7 +96,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-  "https://8000-tariq845-solehaven-go5dj7z0ahr.ws-eu108.gitpod.io",
+  "https://8000-tariq845-solehaven-go5dj7z0ahr.ws-eu109.gitpod.io",
 ]
 
 # Password validation
