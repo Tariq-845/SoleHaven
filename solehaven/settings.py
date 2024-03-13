@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  '8000-tariq845-solehaven-go5dj7z0ahr.ws-eu108.gitpod.io',
+  '8000-tariq845-solehaven-go5dj7z0ahr.ws-eu109.gitpod.io',
   '.herokuapp.com',
 ]
 
