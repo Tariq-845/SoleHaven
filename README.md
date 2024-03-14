@@ -1,110 +1,93 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 style="text-align:center">SoleHaven</h1>
 
-Welcome Tariq Ebden,
+Welcome to SoleHaven. SoleHaven is a fictional online store for consumers to purchase premium shoes. This app provides a wide selection of new shoes for users to browse and pick and choose which ones they want. It also allows users to create reviews on each product.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Live project can be found here: [SolveHaven]([LINK HERE])
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Mock Up]([LINK HERE])
 
-## Gitpod Reminders
+## Index
+* [UX Design](#ux-design)
+  * [Website Goals](#website-goals)
+  * [Planning](#planning)
+  * [Epics](#epics)
+  * [User Stories](#user-stories)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX Design
 
-`python3 -m http.server`
+### Website Goals
 
-A blue button should appear to click: _Make Public_,
+There is no specific target audience; anyone who has even a slight interest in premium trainers is welcome. The main aim of this website is to allow those users to browse around and pick out which trainers they want. The website is a simple design so it's easy to navigate and find exactly what you're looking for.
 
-Another blue button should appear to click: _Open Browser_.
+This website also aims to allow users to create, edit and delete their own reviews of the product, giving it a rating. Users will be able to see other users reviews and what they think about a specific product. Ratings of each product will also be viewable for users.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Planning
 
-A blue button should appear to click: _Make Public_,
+This website was created using the agile methodology - working and pushing small features incrementally. This project was produced in 10 days so it was important to not space out development time too much. 
 
-Another blue button should appear to click: _Open Browser_.
+Furthermore, the project features were assigned with epics, detailing the reason behind why it was needed, and also assigned labels with MoSCoW(Must Have, Should Have, Could have and Won't Have) prioritisation. "Must Have" were given top prioritisation as they are essential for the projects functionality. "Should Have" labels are second on the list, "Could Have" is third and finally "Won't Have" is last and will be added to the backlog for future iterations. It was done this way to fufil the MVP requirements and minimise the scope of the project to present a functioning website.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Below is the Kanban board which was used throughout the project development cycle and was created using Trello:
+[Trello]([LINK HERE])
 
-To log into the Heroku toolbelt CLI:
+![Kanban Board]([LINK HERE])
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Epics
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+**EPIC 1 - Setup**
 
-------
+The first epic is the setup. The setup is necessary for the application to have a base structure and wouldn't be possible to create a project without this.
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**EPIC 2 - Authentication**
 
-**September 20 2023:** Update Python version to 3.9.17.
+This epic is a critical step for the main function of the website and is related to all the user stories related to authentication. This will allow users to create profiles and view the pages that should only be accessible to them. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**EPIC 3 - Products**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The product epic is for all user stories relating to the products on display. Site owners will be able to create, edit and delete products if necessary so users are given the correct information on display.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+**EPIC 4 - Reviews**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+This is related to all the user stories that are related to creating, reading, updating and deleting reviews. This allows users to see other users opinions on certain products, as well as, site owners to see what their best rated products are.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+**EPIC 5 - Deployment**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+This epic is to detail the steps made in deploying the project to Heroku for users to access and use.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### User Stories
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+**EPIC 1 - Setup**
+- As a developer, I want to create a base.html page so I can extend it to the other html pages for reusability.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- As a developer, I want to create static files so that I can store images, CSS and JavaScript code so that it can be linked to the pages and work on the deployed website.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- As a developer, I want to create a header and footer which includes navbar and necessary links so that users have an easy time navigating through the website.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+**EPIC 2 - Authentication**
+- As a developer, I want to incorporate authentication so that users have the ability to create an account and login/logout.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- As a Site Owner, I want authentication implementation so that users accessing the site can create an account to purchase products and leave reviews.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- As a Site User, I want authentication implemented so I can create a personal account to purchase products and leave reviews for other users.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**EPIC 3 - Products**
+- As a Site Owner, I want to be able to create new products to post on the site so that I can ensure any new products after inital deployment can be added.
 
-------
+- As a Site Owner, I want to be able to edit/delete products so that users can only see the available products we have to offer.
 
-## FAQ about the uptime script
+- As a user, I want to be able to view any products the site are offering so that I can see if I am interested in them for potential purchase.
 
-**Why have you added this script?**
+**EPIC 4 - Reviews**
+- As a Site Owner, I want to see users reviews on products so that we have the necessary data to see why users like or don't like certain products.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- As a Site User, I want to see other user reviews so that I can make a decision on a potential purchase.
 
-**How will this affect me?**
+- As a Site User, I want to create reviews so that I can express my opinion on certain products.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- As a Site User, I want to edit/delete my own reviews so that in case my opinion has changed, I can reflect that in the review after the inital post.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+**EPIC 5 - Deployment**
+- As a developer, I want to collect static files so they are served for deployment on Heroku.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- As a developer, I want to deploy the project on Heroku so that it can be accessed by users.
