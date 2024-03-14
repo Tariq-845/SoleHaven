@@ -27,10 +27,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-  '8000-tariq845-solehaven-go5dj7z0ahr.ws-eu109.gitpod.io',
+  '8000-tariq845-solehaven-go5dj7z0ahr.ws-eu110.gitpod.io',
   '.herokuapp.com',
 ]
 
@@ -97,7 +97,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-  "https://8000-tariq845-solehaven-go5dj7z0ahr.ws-eu109.gitpod.io",
+  "https://8000-tariq845-solehaven-go5dj7z0ahr.ws-eu110.gitpod.io",
 ]
 
 # Password validation

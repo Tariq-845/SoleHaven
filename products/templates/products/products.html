@@ -7,7 +7,7 @@
     {% for product in products %}
     <div class="col-6 col-md-4">
       <div>
-        <a href="#">
+        <a href="{% url 'product_detail' product.id %}">
           <div>
             <img src="{{ product.product_image.url }}" alt="Image of shoe product" class="scale">
           </div>
