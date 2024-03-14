@@ -9,7 +9,7 @@
       <div>
         <a href="{% url 'product_detail' product.id %}">
           <div>
-            <img src="{{ product.product_image.url }}" alt="Image of shoe product" class="scale">
+            <img src="{{ product.product_image.url }}" alt="{{ product.name }}" class="scale">
           </div>
           <div>
             <h3 class="text-center">{{ product.name }}</h3>

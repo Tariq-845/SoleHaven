@@ -1,2 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block content %}
+<div class="container" id="product_detail">
+  <div class="row">
+    <div class="col-6">
+      <img src="{{ products.product_image.url }}" alt="{{ products.name }}" class="scale p-2">
+    </div>
+    <div class="col-6">
+      <h3>{{ products.name }}</h3>
+      <small>£{{ products.price }}</small>
+      <hr>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Size</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <hr>
+      <p>{{ products.description }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
