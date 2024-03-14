@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -25,3 +26,23 @@ class Product(models.Model):
 
   def __str__(self):
     return self.name
+
+class Review(models.Model):
+  product = models.ForeignKey(
+    Product,
+    on_delete=models.CASCADE,
+    related_name='reviews'
+  )
+  author = models.ForeignKey(
+    User,
+    on_delete=models.CASCADE,
+    related_name='review_author'
+  )
+  body = models.TextField()
+  date_posted = models.DateTimeField(auto_now_add=True)
+
+  class Meta:
+    ordering = ['date_posted']
+
+  def __str__(self):
+    return f'Review {self.body} by {self.author}'
