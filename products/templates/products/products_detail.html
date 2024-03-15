@@ -18,7 +18,33 @@
         <option value="3">Three</option>
       </select>
       <hr>
-      <p>{{ products.description }}</p>
+      <p>{{ products.description | safe }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <strong>
+        <i class="fa-regular fa-comments"></i> {{ review_count }}
+      </strong>
+    </div>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center p-2">
+      <h3>Reviews:</h3>
+    </div>
+  </div>
+  <div class="row mb-4" id="user-reviews">
+    <div class="col-12 col-md-6 card">
+      <div class="card-body">
+        {% for review in reviews %}
+        <blockquote class="mb-5">
+          <p>{{ review.body }}</p>
+          <footer class="blockquote-footer">{{ review.author }}</footer>
+          <hr class="reviews">
+        </blockquote>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>

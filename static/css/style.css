@@ -63,3 +63,9 @@ body {
 #product_detail {
   color: #000;
 }
+
+/* Product reviews */
+
+.reviews {
+  width: 50%;
+}
