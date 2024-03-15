@@ -69,3 +69,17 @@ body {
 .reviews {
   width: 50%;
 }
+
+/* Review Form */
+#reviewForm {
+  margin-top: 0.5rem;
+}
+
+.form-label {
+  display: none;
+}
+
+.card {
+  border: 2px solid #000;
+  box-shadow: 3px 4px rgba(0, 0, 0, 0.6);
+}

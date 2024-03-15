@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container" id="product_detail">
-  <div class="row">
+  <div class="row mb-5">
     <div class="col-6">
       <img src="{{ products.product_image.url }}" alt="{{ products.name }}" class="scale p-2">
     </div>
@@ -35,15 +36,32 @@
     </div>
   </div>
   <div class="row mb-4" id="user-reviews">
-    <div class="col-12 col-md-6 card">
+    <div class="col-12 col-md-5 card mx-auto">
       <div class="card-body">
+        <!-- For loop to display reviews -->
         {% for review in reviews %}
         <blockquote class="mb-5">
-          <p>{{ review.body }}</p>
+          <p>{{ review.body | linebreaks }}</p>
           <footer class="blockquote-footer">{{ review.author }}</footer>
           <hr class="reviews">
         </blockquote>
         {% endfor %}
+      </div>
+    </div>
+    <!-- Review Form -->
+    <div class="col-12 col-md-5 card mx-auto">
+      <div class="card-body">
+        {% if user.is_authenticated %}
+        <h3>Feel free to leave a review!</h3>
+        <small>Customers will appreciate it!</small>
+        <form id="reviewForm" method="post">
+          {{ review_form | crispy }}
+          {% csrf_token %}
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        {% else %}
+        <p>Please login or register to leave a review</p>
+        {% endif %}
       </div>
     </div>
   </div>
