@@ -1,4 +1,5 @@
 {% load static %}
+{% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'browse' as browse_url %}
 {% url 'account_login' as login_url %}
@@ -24,7 +25,7 @@
 <body>
   <nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark" id="nav">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">SoleHaven</a>
+      <a class="navbar-brand" href="{% url 'home' %}">SoleHaven</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,7 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="#">Home</a>
+            <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">About</a>

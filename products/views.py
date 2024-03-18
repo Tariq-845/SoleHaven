@@ -52,7 +52,7 @@ def product_detail(request, pk):
 
 def review_edit(request, pk, review_id):
   """ 
-  View for users to edit their review
+  View for users to edit their reviews
   """
   if request.method == "POST":
     product = get_object_or_404(Product, pk=pk)
@@ -75,4 +75,27 @@ def review_edit(request, pk, review_id):
         'There was an error trying to update your review'
       )
     
+  return HttpResponseRedirect(reverse('product_detail', args=[pk]))
+
+def review_delete(request, pk, review_id):
+  """ 
+  View for users to delete their reviews
+  """
+  product = get_object_or_404(Product, pk=pk)
+  review = get_object_or_404(Review, pk=review_id)
+
+  if review.author == request.user:
+    review.delete()
+    messages.add_message(
+      request,
+      messages.SUCCESS,
+      'Your review has been successfully deleted!'
+    )
+  else:
+    messages.add_message(
+      request,
+      messages.ERROR,
+      'There was an error trying to delete your review'
+    )
+  
   return HttpResponseRedirect(reverse('product_detail', args=[pk]))
