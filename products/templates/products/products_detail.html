@@ -6,11 +6,11 @@
 <div class="container" id="product_detail">
   <div class="row mb-5">
     <div class="col-6">
-      <img src="{{ products.product_image.url }}" alt="{{ products.name }}" class="scale p-2">
+      <img src="{{ product.product_image.url }}" alt="{{ products.name }}" class="scale p-2">
     </div>
     <div class="col-6">
-      <h3>{{ products.name }}</h3>
-      <small>£{{ products.price }}</small>
+      <h3>{{ product.name }}</h3>
+      <small>£{{ product.price }}</small>
       <hr>
       <select class="form-select" aria-label="Default select example">
         <option selected>Size</option>
@@ -19,7 +19,7 @@
         <option value="3">Three</option>
       </select>
       <hr>
-      <p>{{ products.description | safe }}</p>
+      <p>{{ product.description | safe }}</p>
     </div>
   </div>
   <div class="row">

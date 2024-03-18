@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile('env.py'):
   import env
@@ -27,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
   '8000-tariq845-solehaven-go5dj7z0ahr.ws-eu110.gitpod.io',
@@ -146,12 +147,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-if 'DEVELOPMENT' in os.environ:
-    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# if 'DEVELOPMENT' in os.environ:
+#     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# else:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 CLOUIDNARY_URL = os.environ.get('CLOUDINARY_URL')
 
 # Default primary key field type
