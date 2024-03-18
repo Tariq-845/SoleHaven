@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .models import Product, Review
 from .forms import ReviewForm
 
@@ -16,6 +17,10 @@ def product_page(request):
   )
 
 def product_detail(request, pk):
+  """ 
+  View to render the product detail pages and
+  allow valid users to post reviews 
+  """
   product = get_object_or_404(Product, pk=pk)
   reviews = product.reviews.all()
   review_count = product.reviews.all().count()
@@ -44,3 +49,30 @@ def product_detail(request, pk):
       'review_form': review_form
     }
   )
+
+def review_edit(request, pk, review_id):
+  """ 
+  View for users to edit their review
+  """
+  if request.method == "POST":
+    product = get_object_or_404(Product, pk=pk)
+    review = get_object_or_404(Review, pk=review_id)
+    review_form = ReviewForm(data=request.POST, instance=review)
+
+    if review_form.is_valid() and review.author == request.user:
+      review = review_form.save(commit=False)
+      review.product = product
+      review.save()
+      messages.add_message(
+        request,
+        messages.SUCCESS,
+        'Your review has been updated successfully!'
+      )
+    else:
+      messages.add_message(
+        request,
+        messages.ERROR,
+        'There was an error trying to update your review'
+      )
+    
+  return HttpResponseRedirect(reverse('product_detail', args=[pk]))

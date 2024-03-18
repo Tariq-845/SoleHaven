@@ -35,16 +35,19 @@
       <h3>Reviews:</h3>
     </div>
   </div>
-  <div class="row mb-4" id="user-reviews">
+  <div class="row mb-4">
     <div class="col-12 col-md-5 card mx-auto">
       <div class="card-body">
         <!-- For loop to display reviews -->
         {% for review in reviews %}
-        <blockquote class="mb-5">
-          <p>{{ review.body | linebreaks }}</p>
-          <footer class="blockquote-footer">{{ review.author }}</footer>
-          <hr class="reviews">
+        <blockquote id="review{{ review.id }}" class="mb-3">
+          {{ review.body | linebreaks }}
         </blockquote>
+          <footer class="blockquote-footer">{{ review.author }}</footer>
+          {% if user.is_authenticated and review.author == user %}
+          <button class="btn btn-warning editButton" review_id="{{ review.id }}">Edit</button>
+          {% endif %}
+          <hr class="reviews mb-5">
         {% endfor %}
       </div>
     </div>
@@ -57,7 +60,7 @@
         <form id="reviewForm" method="post">
           {{ review_form | crispy }}
           {% csrf_token %}
-          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-primary" type="submit" id="submitButton">Submit</button>
         </form>
         {% else %}
         <p>Please login or register to leave a review</p>
@@ -66,4 +69,8 @@
     </div>
   </div>
 </div>
+{% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/reviews.js' %}"></script>
 {% endblock %}
