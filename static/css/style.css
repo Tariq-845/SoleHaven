@@ -114,6 +114,11 @@ body {
 }
 
 /* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
 #footer-icons {
   display: flex;
@@ -155,4 +160,17 @@ body {
 .card {
   border: 2px solid #000;
   box-shadow: 3px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------ Sign Up */
+#signup-container,
+#login-container {
+  width: 75%;
+}
+
+@media screen and (min-width: 992px) {
+  #signup-container,
+  #login-container {
+    width: 50%;
+  }
 }
