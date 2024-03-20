@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container" id="product_detail">
+<div class="container mt-5" id="product_detail">
   <div class="row mb-5">
     <div class="col-6">
       <img src="{{ product.product_image.url }}" alt="{{ products.name }}" class="scale p-2">
@@ -19,7 +19,7 @@
         <option value="3">Three</option>
       </select>
       <hr>
-      <p>{{ product.description | safe }}</p>
+      <p>{{ product.description | linebreaks }}</p>
     </div>
   </div>
   <div class="row">
@@ -35,7 +35,7 @@
       <h3>Reviews:</h3>
     </div>
   </div>
-  <div class="row mb-4">
+  <div class="row mb-5">
     <div class="col-12 col-md-5 card mx-auto">
       <div class="card-body">
         <!-- For loop to display reviews -->
