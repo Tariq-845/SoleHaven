@@ -1,17 +1,18 @@
 from django.db import models
+from django import forms
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
 SIZE_CHOICES = (
-  (0, 'Size 6'),
-  (1, 'Size 7'),
-  (2, 'Size 8'),
-  (3, 'Size 9'),
-  (4, 'Size 10'),
-  (5, 'Size 11'),
-  (6, 'Size 12'),
+  ('SIZE 6', 'Size 6'),
+  ('SIZE 7', 'Size 7'),
+  ('SIZE 8', 'Size 8'),
+  ('SIZE 9', 'Size 9'),
+  ('SIZE 10', 'Size 10'),
+  ('SIZE 11', 'Size 11'),
+  ('SIZE 12', 'Size 12'),
 )
 
 class Product(models.Model):
@@ -19,9 +20,9 @@ class Product(models.Model):
   description = models.TextField()
   price = models.DecimalField(max_digits=6, decimal_places=2)
   product_image = CloudinaryField('image', default='placeholder')
-  sizes = models.IntegerField(
+  sizes = forms.ChoiceField(
     choices = SIZE_CHOICES,
-    default=0
+    widget=forms.Select(),
   )
 
   def __str__(self):

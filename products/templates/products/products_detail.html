@@ -13,10 +13,9 @@
       <small>£{{ product.price }}</small>
       <hr>
       <select class="form-select" aria-label="Sizes">
-        <option selected>Select a size</option>
-        <option value="1">Size 6</option>
-        <option value="2">Size 7</option>
-        <option value="3">Size 8</option>
+        {% for key, value in product.sizes.choices %}
+        <option value="{{ key }}">{{ value }}</option>
+        {% endfor %}
       </select>
       <hr>
       <p>{{ product.description | linebreaks }}</p>
