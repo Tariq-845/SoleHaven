@@ -120,11 +120,6 @@ body {
 }
 
 /* ----------------------------- Footer */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
 
 #footer-icons {
   display: flex;
@@ -136,6 +131,24 @@ footer {
 
 #footer-icons li i {
   color: #fff;
+  transition: transform 0.3s;
+}
+
+#footer-icons li i:hover {
+  transform: scale(1.1);
+}
+
+.footer-divider {
+  width: 20%;
+  color: #fff;
+}
+
+footer>div a {
+  color: #E5E5E5;
+}
+
+#footer-contact {
+  color: #E5E5E5;
 }
 
 /* ----------------------------- Product image scaling */
