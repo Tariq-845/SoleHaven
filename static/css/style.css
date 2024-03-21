@@ -160,6 +160,27 @@ footer>div a {
   color: #000;
 }
 
+.product-card-img {
+  overflow: hidden;
+}
+
+.product-card img{
+  transition: transform 0.3s;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card a {
+  color: #000;
+  text-decoration: none;
+}
+
+.product-card a:hover {
+  color: #f75a5a;
+}
+
 /* ----------------------------- Product reviews */
 
 .reviews {

@@ -5,10 +5,10 @@
 <div class="container mt-5">
   <div class="row">
     {% for product in products %}
-    <div class="col-6 col-md-4">
+    <div class="col-6 col-md-4 product-card">
       <div>
         <a href="{% url 'product_detail' product.id %}">
-          <div>
+          <div class="product-card-img">
             <img src="{{ product.product_image.url }}" alt="{{ product.name }}" class="scale">
           </div>
           <div>
