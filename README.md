@@ -2,7 +2,7 @@
 
 Welcome to SoleHaven. SoleHaven is a fictional online store for consumers to purchase premium shoes. This app provides a wide selection of new shoes for users to browse and pick and choose which ones they want. It also allows users to create reviews on each product.
 
-Live project can be found here: [SolveHaven]([LINK HERE])
+Live project can be found here: [SolveHaven](https://solehaven-8ecf0af00880.herokuapp.com/)
 
 ![Mock Up]([LINK HERE])
 
@@ -12,6 +12,17 @@ Live project can be found here: [SolveHaven]([LINK HERE])
   * [Planning](#planning)
   * [Epics](#epics)
   * [User Stories](#user-stories)
+
+* [Features](#features)
+
+* [Wireframes](#wireframes)
+  * [Home](#home-page)
+  * [About](#about-page)
+  * [Register](#registersign-up-page)
+  * [Sign In](#sign-in-page)
+  * [Sign Out](#sign-out-page)
+
+* [Technologies Used](#technologies-used)
 
 ## UX Design
 
@@ -91,3 +102,89 @@ This epic is to detail the steps made in deploying the project to Heroku for use
 - As a developer, I want to collect static files so they are served for deployment on Heroku.
 
 - As a developer, I want to deploy the project on Heroku so that it can be accessed by users.
+
+## Features
+
+- **User Authentication**
+  - Register an account
+  - Log in after account creation
+  - Sign out
+  - Logged out users cannot post reviews and are prompted to login
+
+- **Navbar**
+  - Shows different pages for users to access
+  - Indicator to show what page you're on
+  - Responsive on smaller screens (burger icon)
+
+- **CRUD Functionality**
+  - Logged in users can post reviews
+  - Logged in users can edit/delete their reviews
+
+### Future Features
+- Basket 
+  - Allow users to add products to their personalised basket
+
+- Search
+  - Allow users to search for products 
+
+- Categories
+  - Allow users to filter products by categories
+
+## Wireframes
+
+### Home Page
+![Home Page](docs/readme_wireframes/home_page_wireframe.png)
+![Home Page 2](docs/readme_wireframes/home_page_wireframe_2.png)
+![Home Page Mobile](docs/readme_wireframes/home_page_wireframe_mobile.png)
+
+### About Page
+![About](docs/readme_wireframes/about_page_wireframe.png)
+![About Mobile](docs/readme_wireframes/about_page_wireframe_mobile.png)
+
+### Browse Page
+- Small description
+
+### Product Details Page 
+- Small description
+
+### Create Review Page
+- Small description
+
+### Edit/Delete Pop Up
+- Small description
+
+### Register/Sign Up Page
+![Register](docs/readme_wireframes/register_page_wireframe.png)
+![Register Mobile](docs/readme_wireframes/register_page_wireframe_mobile.png)
+
+### Sign In Page
+![Sign In](docs/readme_wireframes/sign_in_page_wireframe.png)
+![Sign In Mobile](docs/readme_wireframes/sign_in_page.png)
+
+### Sign Out Page
+![Sign Out](docs/readme_wireframes/sign_out_page_wireframe.png)
+![Sign Out Mobile](docs/readme_wireframes/sign_in_page_wireframe_mobile.png)
+
+### ERD
+- Small description
+
+## Technologies Used
+
+
+## Testing
+
+### Validator Testing
+For HTML/CSS Validation testing, my project passed both with no errors shown:
+
+- **HTML**
+  - Validator Test for HTML5: [W3C HTML Validation](docs/README_images/HTML_validator.png)
+
+- **CSS**
+  - Validator test for CSS3: [W3C CSS Validation](docs/README_images/CSS_validator.png)
+
+### Bugs
+- Small description
+
+## Deployment
+
+## Credits
