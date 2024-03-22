@@ -272,9 +272,39 @@ For HTML/CSS Validation testing, my project passed both with no errors shown:
 
 
 ### PEP8 Testing
+For this test I used the [CI Python Linter](https://pep8ci.herokuapp.com/#) on my .py files. 
+
+| File | Screenshot | Result |
+|--------|--------|--------|
+| solehaven urls.py | ![SoleHaven URLs](docs/README_images/solehaven_urls.png) | Pass |
+| solehaven settings.py | ![SoleHaven Settings](docs/README_images/solhaven_settings.png) | Pass (Only default Django files have errors) |
+| About admin.py | ![About Admin](docs/README_images/about_admin.png) | Pass |
+| About models.py | ![About Models](docs/README_images/about_models.png) | Pass |
+| About urls.py | ![About URLs](docs/README_images/about_urls.png) | Pass |
+| About views.py | ![About Views](docs/README_images/about_views.png) | Pass |
+| Home urls.py | ![Home URLs](docs/README_images/home_urls.png) | Pass |
+| Home views.py | ![Home Views](docs/README_images/home_views.png) | Pass |
+| Products admin.py | ![Products Admin](docs/README_images/products_admin.png) | Pass |
+| Products forms.py | ![Products Forms](docs/README_images/products_form.png) | Pass |
+| Products models.py | ![Products Models](docs/README_images/products_models.png) | Pass |
+| Products urls.py | ![Products URLs](docs/README_images/products_urls.png) | Pass |
+| Products views.py | ![Products Views](docs/README_images/products_views.png) | Pass |
 
 ### Bugs
-- Small description
+- NoReverseMatch for products_detail.html
+  - FIX: product.id NOT products.id
+
+- products_detail.html render wasn't working
+  - Fix: returned render in wrong order (put request first)
+
+- Images weren't rendering at all on deployment
+  - FIX: collectstatic so it has images on deployment
+
+- JS/CSS files not working on deployment
+  - FIX: collectstatic to get the local static files
+
+- TypeError: cannot read property of 'innerText' of null
+  - FIX: had small typo in JS file so it wasn't reading the correct elements
 
 ## Deployment
 
