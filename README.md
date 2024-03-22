@@ -170,6 +170,27 @@ This epic is to detail the steps made in deploying the project to Heroku for use
 
 ## Technologies Used
 
+- Languages
+  - HTML5
+  - CSS3
+  - JavaScript
+  - Python
+
+- Frameworks
+  - Bootstrap 4+
+  - Django
+
+- Databases & Deployment
+  - ElephantSQL
+  - Cloudinary - Streamline media management and improve user experience by automatically delivering images and videos, enhanced and optimized for every user.
+
+- Libraries & Programs
+  - [GitHub](https://github.com) - Used to create the repository for the project.
+  - [Trello](https://trello.com) - Used for the project Kanban Board to monitor the progress of the project.
+  - [Gitpod](https://www.gitpod.io/) - Cloud based development environment 
+  - [Balsamiq](https://balsamiq.com/) - Wireframing tool for the design process
+  - [Google Fonts](https://fonts.google.com/) - Used to import various fonts for the design process
+  - [Miro](https://miro.com/) - For brainstorming ideas for any part of the project
 
 ## Testing
 
@@ -182,9 +203,107 @@ For HTML/CSS Validation testing, my project passed both with no errors shown:
 - **CSS**
   - Validator test for CSS3: [W3C CSS Validation](docs/README_images/CSS_validator.png)
 
+### Manual Testing
+**Admin**
+
+| Test | Result |
+| --- | --- |
+| As a Site Admin I can post products on admin panel | Pass |
+| As a Site Admin I can edit/delete posts | Pass |
+
+**Logged in users**
+
+| Test | Result |
+| --- | --- |
+| As a logged in user I can post reviews on product pages | Pass |
+| As a logged in user I can edit my own reviews | Pass |
+| As a logged in user I can delete my own reviews | Pass |
+| As a logged in user I can view all the pages accessible to me | Pass |
+| As a logged in user I am prompted if I successfully logged in | Pass |
+| As a logged in user I am prompted if I successfully logged out | Pass |
+
+**Logged out users**
+
+| Test | Result |
+| --- | --- |
+| As a logged out user I cannot post reviews on product pages | Pass |
+| As a logged out user I am prompted to login/register to post a review | Pass |
+| As a logged out user I can view all the pages accessible to me | Pass |
+
+**Registering an account**
+
+| Test | Result |
+| --- | --- |
+| As a user I can create an account | Pass |
+| As a user I can sign into my account after registration | Pass |
+| As a user I can sign out of my account | Pass |
+
+**Navbar**
+
+| Test | Result |
+| --- | --- |
+| Navbrand link navigates to 'Home' | Pass |
+| 'Home' link works on navbar | Pass |
+| 'About' link works on navbar | Pass |
+| 'Browse' link works on navbar | Pass |
+| 'Register' link works on navbar | Pass |
+| 'Sign In' link works on navbar | Pass |
+| 'Sign Out' link works on navbar | Pass |
+
+**Buttons/Links**
+
+| Test | Result |
+| --- | --- |
+| Buttons on 'Home' page works and are linked proeprly | Pass |
+| Buttons on 'Browse' page works and are linked proeprly | Pass |
+| Product detail page on 'Browse' page works and are linked proeprly | Pass |
+
 ### Bugs
 - Small description
 
 ## Deployment
 
+This project was deployed via [Heroku](https://www.heroku.com). It's a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Your development environment needs specific files to deploy successfully on Heroku:
+
+**Settings**
+- Ensure your 'DEBUG' value in your settings.py is set to False before deploying.
+
+**Required files before deployment**
+- requirements.txt 
+  - This file is necessary as it identifies all your installed packages
+  - For Heroku deployment, install gunicorn with the following command: `pip3 install gunicorn~=20.1.0`
+  - After ensure to add it in your requirements.txt file with the following command: `pip3 freeze --local > requirements.txt`
+
+- Procfile
+  - This is so Heroku can identify what kind of service you are running. 
+  - As it's a web based app, you must put the following in: `web: gunicorn **project_name**.wsgi `
+
+**Steps for deployment**
+1. On your dashboard, select 'New' near the top right. You will be provided with two options in the drop down; select 'Create a new app'.
+
+2. Next step, you will give your app a name (has to be unique). After, select your region, in my case it was Europe. Finally, click on 'Create App'.
+
+3. Once the app has successfully been created, navigate to the 'Settings' tab and select 'Reveal Config Vars' and input your variables
+
+| Key | Value |
+| --- | --- |
+| `CLOUDINARY_URL` | [Enter your cloudinary URL] |
+| `DATABASE_URL` | [Enter your database URL (ElephantSQL)] |
+| `DISABLE_COLLECTSTATIC` | 1 (This is only temporary, once you collectstatic you will need to remove it) |
+| `SECRET_KEY` | [Enter your secret key (Find secure ones by using a generator)] |
+
+4. Once your convig vars are put in correctly, switch over to the 'Deploy' tab and select your deployment method (GitHub) then connect your account.
+
+5. After your account has connected successfully, scroll down to 'Manual deploy' and choose the branch (Main). 
+
+6. Click on 'Deploy Branch' and wait for Heroku to deploy the project.
+
+7. Finally, after Heroku successfully deploys the project, scroll to the top of the page and there will be a button located near the top right called 'Open app'. This will open your app on a new page and you can view your newly deployed project. 
+
+**Note**
+- As it's a manual deployment, you will need to redeploy your app everytime you make changes to it.
+
 ## Credits
+
