@@ -252,6 +252,13 @@ For HTML/CSS Validation testing, my project passed both with no errors shown:
 | 'Sign In' link works on navbar | Pass |
 | 'Sign Out' link works on navbar | Pass |
 
+**Footer**
+
+| Test | Result |
+| --- | --- |
+| Social links work and open in new tab | Pass |
+| Other general links work and navigate accordingly | Pass |
+
 **Buttons/Links**
 
 | Test | Result |
@@ -262,6 +269,9 @@ For HTML/CSS Validation testing, my project passed both with no errors shown:
 
 ### Lighthouse Testing
 ![Lighthouse](docs/README_images/lighthouse.png)
+
+
+### PEP8 Testing
 
 ### Bugs
 - Small description
