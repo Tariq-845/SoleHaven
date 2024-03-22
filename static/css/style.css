@@ -11,12 +11,6 @@ body {
 
 /* ----------------------------- Hero image/text */
 
-#hero-text {
-  color: #fff;
-  position: absolute;
-  top: 100px;
-}
-
 .browse-btn {
   color: #fff;
   border: 2px solid #fff;
@@ -37,10 +31,10 @@ body {
 }
 
 #hero-text {
-  margin-left: 120px;
   color: #fff;
   position: absolute;
   bottom: 30px;
+  top: 100px;
 }
 
 /* ----------------------------- Home Page */
