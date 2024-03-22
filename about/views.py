@@ -4,6 +4,9 @@ from .models import About
 
 # Create your views here.
 def about_page(request):
+  """ 
+  View to render the About page
+  """
   about = About.objects.all()
 
   return render(
