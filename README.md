@@ -4,7 +4,7 @@ Welcome to SoleHaven. SoleHaven is a fictional online store for consumers to pur
 
 Live project can be found here: [SolveHaven](https://solehaven-8ecf0af00880.herokuapp.com/)
 
-![Mock Up]([LINK HERE])
+![Mock Up](docs/README_images/am_i_responsive.png)
 
 ## Index
 * [UX Design](#ux-design)
@@ -23,6 +23,20 @@ Live project can be found here: [SolveHaven](https://solehaven-8ecf0af00880.hero
   * [Sign Out](#sign-out-page)
 
 * [Technologies Used](#technologies-used)
+
+* [Testing](#testing)
+  * [Validator Testing](#validator-testing)
+  * [Manual Testing](#manual-testing)
+  * [Lighthouse Testing](#lighthouse-testing)
+  * [Bugs](#bugs)
+
+* [Deployment](#deployment)
+
+* [Credits](#credits)
+  * [Images](#images)
+  * [Videos](#videos)
+  * [Code](#code)
+  * [Content](#content)
 
 ## UX Design
 
@@ -141,18 +155,6 @@ This epic is to detail the steps made in deploying the project to Heroku for use
 ![About](docs/readme_wireframes/about_page_wireframe.png)
 ![About Mobile](docs/readme_wireframes/about_page_wireframe_mobile.png)
 
-### Browse Page
-- Small description
-
-### Product Details Page 
-- Small description
-
-### Create Review Page
-- Small description
-
-### Edit/Delete Pop Up
-- Small description
-
 ### Register/Sign Up Page
 ![Register](docs/readme_wireframes/register_page_wireframe.png)
 ![Register Mobile](docs/readme_wireframes/register_page_wireframe_mobile.png)
@@ -166,7 +168,7 @@ This epic is to detail the steps made in deploying the project to Heroku for use
 ![Sign Out Mobile](docs/readme_wireframes/sign_in_page_wireframe_mobile.png)
 
 ### ERD
-- Small description
+![ERD](docs/README_images/ERD.png)
 
 ## Technologies Used
 
@@ -258,6 +260,9 @@ For HTML/CSS Validation testing, my project passed both with no errors shown:
 | Buttons on 'Browse' page works and are linked proeprly | Pass |
 | Product detail page on 'Browse' page works and are linked proeprly | Pass |
 
+### Lighthouse Testing
+![Lighthouse](docs/README_images/lighthouse.png)
+
 ### Bugs
 - Small description
 
@@ -307,3 +312,26 @@ Your development environment needs specific files to deploy successfully on Hero
 
 ## Credits
 
+### Images
+- Open Source images used in the project:
+  - [unsplash](https://unsplash.com/)
+
+- Favicon
+  - [Favivon.io](https://favicon.io/favicon-generator/)
+
+### Videos
+- Freecodecamp.org
+  - [freecodecamp](https://www.youtube.com/@freecodecamp)
+
+### Code
+- Code Institute 
+  - For general Django setup refresher and terminal commands.
+
+- Stack Overflow
+  - For bug fixes and best practices.
+
+### Content
+- Used ChatGPT v3.5:
+  - Some of the 'About' page text.
+  - Testimonial section on 'Home' page.
+  - General bug fixing and code clean up.
