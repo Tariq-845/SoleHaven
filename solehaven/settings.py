@@ -15,7 +15,7 @@ import os
 from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile('env.py'):
-  import env
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -150,12 +150,6 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# if 'DEVELOPMENT' in os.environ:
-#     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-# else:
-#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 CLOUIDNARY_URL = os.environ.get('CLOUDINARY_URL')
 
 # Default primary key field type
