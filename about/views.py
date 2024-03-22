@@ -6,15 +6,9 @@ from .models import About
 
 
 def about_page(request):
-    """ 
+    """
     View to render the About page
     """
     about = About.objects.all()
 
-    return render(
-      request,
-      "about/about.html",
-      {
-        "about": about
-      }
-    )
+    return render(request, "about/about.html", {"about": about})

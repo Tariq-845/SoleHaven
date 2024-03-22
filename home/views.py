@@ -9,5 +9,5 @@ class Home(TemplateView):
     Template view to display the home page
     (index.html)
     """
-    template_name = 'home/index.html'
-    
+
+    template_name = "home/index.html"
