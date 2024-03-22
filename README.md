@@ -28,6 +28,7 @@ Live project can be found here: [SolveHaven](https://solehaven-8ecf0af00880.hero
   * [Validator Testing](#validator-testing)
   * [Manual Testing](#manual-testing)
   * [Lighthouse Testing](#lighthouse-testing)
+  * [PEP8](#pep8-testing)
   * [Bugs](#bugs)
 
 * [Deployment](#deployment)
@@ -369,6 +370,10 @@ Your development environment needs specific files to deploy successfully on Hero
 
 - Stack Overflow
   - For bug fixes and best practices.
+
+- README.md References
+  - For Python testing, I referenced [Sara Mehlis](https://github.com/SaraMehlis)
+  - For general outline of README.md, I referenced [Gareth McGirr](https://github.com/Gareth-McGirr)
 
 ### Content
 - Used ChatGPT v3.5:
