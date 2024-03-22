@@ -53,7 +53,7 @@ This website was created using the agile methodology - working and pushing small
 
 Furthermore, the project features were assigned with epics, detailing the reason behind why it was needed, and also assigned labels with MoSCoW(Must Have, Should Have, Could have and Won't Have) prioritisation. "Must Have" were given top prioritisation as they are essential for the projects functionality. "Should Have" labels are second on the list, "Could Have" is third and finally "Won't Have" is last and will be added to the backlog for future iterations. It was done this way to fufil the MVP requirements and minimise the scope of the project to present a functioning website.
 
-Below is the Kanban board which was used throughout the project development cycle and was created using [Trello](docs/README_images/trello.png):
+Below is the Kanban board which was used throughout the project development cycle and was created using [Trello](https://trello.com/b/SuMGDgZV/solehaven):
 
 ![Kanban Board](docs/README_images/trello.png)
 
