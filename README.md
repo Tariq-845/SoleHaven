@@ -55,7 +55,7 @@ Furthermore, the project features were assigned with epics, detailing the reason
 
 Below is the Kanban board which was used throughout the project development cycle and was created using [Trello](https://trello.com/b/SuMGDgZV/solehaven):
 
-![Kanban Board](docs/README_images/trello.png)
+![Kanban Board](docs/README_images/trello_update.png)
 
 ### Epics
 
