@@ -36,6 +36,7 @@ def product_detail(request, pk):
             messages.add_message(
                 request, messages.SUCCESS, "Your review has successfully been posted"
             )
+            return HttpResponseRedirect(reverse("product_detail", args=[pk]))
 
     return render(
         request,

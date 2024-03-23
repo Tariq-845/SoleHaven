@@ -306,6 +306,9 @@ For this test I used the [CI Python Linter](https://pep8ci.herokuapp.com/#) on m
 - TypeError: cannot read property of 'innerText' of null
   - FIX: had small typo in JS file so it wasn't reading the correct elements
 
+- Review form would resubmit after refreshing the page
+  - FIX: add a redirect after submission
+
 ## Deployment
 
 This project was deployed via [Heroku](https://www.heroku.com). It's a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
